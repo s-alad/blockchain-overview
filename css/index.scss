@@ -115,13 +115,47 @@ body {
     }
 }
 
-#information {
-    height: 1000px;
-    padding-top: 100px;
+#brief {
+    padding-top: 65px;
     @include displayflex(start);
 
     .title {
         color: white;
         font-family: TTcDB;
+        font-size: 62px;
+        margin-bottom: 40px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 22px;
+        font-family: TTcR;
+        color: white;
+        width: 80%;
+    }
+}
+
+#information {
+    padding-top: 65px;
+    @include displayflex(start);
+
+    .title {
+        color: white;
+        font-family: TTcDB;
+        font-size: 62px;
+        margin-bottom: 40px;
+    }
+}
+
+#howitworks {
+    height: 1000px;
+    padding-top: 65px;
+    @include displayflex(start);
+
+    .title {
+        color: white;
+        font-family: TTcDB;
+        font-size: 62px;
+        margin-bottom: 40px;
     }
 }

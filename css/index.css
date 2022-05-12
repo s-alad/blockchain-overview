@@ -97,9 +97,29 @@ body {
   cursor: pointer;
 }
 
+#brief {
+  padding-top: 65px;
+  justify-content: start;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#brief .title {
+  color: white;
+  font-family: TTcDB;
+  font-size: 62px;
+  margin-bottom: 40px;
+}
+#brief p {
+  text-align: center;
+  font-size: 22px;
+  font-family: TTcR;
+  color: white;
+  width: 80%;
+}
+
 #information {
-  height: 1000px;
-  padding-top: 100px;
+  padding-top: 65px;
   justify-content: start;
   display: flex;
   align-items: center;
@@ -108,6 +128,23 @@ body {
 #information .title {
   color: white;
   font-family: TTcDB;
+  font-size: 62px;
+  margin-bottom: 40px;
+}
+
+#howitworks {
+  height: 1000px;
+  padding-top: 65px;
+  justify-content: start;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#howitworks .title {
+  color: white;
+  font-family: TTcDB;
+  font-size: 62px;
+  margin-bottom: 40px;
 }
 
 /*# sourceMappingURL=index.css.map */
