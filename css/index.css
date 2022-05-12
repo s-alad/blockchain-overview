@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #191E29;
+}
+
+#alto {
+  height: 85px;
+}
+
+#centro {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+#centro #blockchain {
+  margin: 25px 0 0 0;
+  display: flex;
+  flex-direction: row;
+}
+#centro #blockchain .block {
+  height: 110px;
+  width: 95px;
+  border: 2px solid white;
+  text-align: center;
+  font-family: TTcR;
+}
+#centro #blockchain .block .top {
+  height: 25px;
+  border-bottom: 1px solid white;
+  color: white;
+}
+#centro #blockchain .block .mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  border-top: 1px solid white;
+  color: white;
+}
+#centro #blockchain .block .bot {
+  height: 25px;
+  border-top: 1px solid white;
+  color: white;
+}
+#centro #blockchain .pointer {
+  width: 50px;
+  height: 85px;
+}
+#centro #blockchain .pointer img {
+  position: relative;
+  top: 30px;
+  color: white;
+  transform: scale(1.7);
+}
+#centro .title {
+  font-size: 8vw;
+  color: white;
+  font-family: TTcDB;
+}
+#centro .subtitle {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 2vw;
+  color: white;
+  font-family: TTcR;
+}
+#centro .action {
+  margin: 45px 0 0 0;
+  font-family: TTcDB;
+}
+#centro .action button {
+  font-size: 22px;
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 2px solid white;
+  color: white;
+  height: 50px;
+  width: 110px;
+  transition: 0.2s;
+  z-index: 99;
+}
+#centro .action button:hover {
+  background-color: white;
+  color: #069e77;
+  cursor: pointer;
+}
+
+#information {
+  height: 1000px;
+  padding-top: 100px;
+  justify-content: start;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#information .title {
+  color: white;
+  font-family: TTcDB;
+}
+
+/*# sourceMappingURL=index.css.map */
