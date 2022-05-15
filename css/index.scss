@@ -199,10 +199,10 @@ section {
         width: 80%;
     }
     .video-wrapper {
-        height: 900px;
-        bottom:40px;
+        height: 600px;
+        top:200px;
         //aspect-ratio: 960/360;
-        position: relative;
+        position: absolute;
         width: 100%;
         background-position: center;
         background-size: cover;
@@ -214,6 +214,7 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: -100;
         
     }
     .video {
@@ -223,7 +224,10 @@ section {
         position: relative;
         bottom: 0px;
         box-shadow: 0 0 30px #FFF;
-        
+        z-index: 999;
+    }
+    .videos {
+        margin-top: 50px
     }
 }
 

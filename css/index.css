@@ -191,9 +191,9 @@ section {
   width: 80%;
 }
 #howitworks .video-wrapper {
-  height: 900px;
-  bottom: 40px;
-  position: relative;
+  height: 600px;
+  top: 200px;
+  position: absolute;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -205,6 +205,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: -100;
 }
 #howitworks .video {
   margin-left: 10px;
@@ -213,6 +214,10 @@ section {
   position: relative;
   bottom: 0px;
   box-shadow: 0 0 30px #FFF;
+  z-index: 999;
+}
+#howitworks .videos {
+  margin-top: 50px;
 }
 
 #use {
