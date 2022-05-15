@@ -11,17 +11,14 @@
         <link rel="stylesheet" href="css/fonts/fonts.css">
         <link rel="stylesheet" href="css/background/background.css">
         <link rel="stylesheet" href="css/timeline/timeline.css">
+        <link rel="stylesheet" href="css/carousel/car.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
-        <div class="grid-bg ba-grid anim">
-            <div class="inner">     
-            </div>
-          
-        <!-- <div id="alto">
-
-        </div> -->
-        <div id="centro">
+        <section id="alto">
+        </section>
+        <section id="centro">
             <div class="title">
                 blockchain
             </div>
@@ -39,73 +36,261 @@
                     </button>
                 </a>
             </div>
-        </div>
-        <div id="spacer" style="height: 50px;"></div>
-        <div id="brief">
+            <div class="wave waveone"></div>
+        </section>
+        <section id="brief" class="">
+            <div class="wave wavetwo"></div>
             <div class="title">
-                What is it really?
+                what is it really?
             </div>
             <p>
                 Blockchain technology is often misunderstood and used interchangeably with Cryptocurrency or other forms of adoption. In the most simple terms,  Blockchain technology is just a system of distribution. The earliest proposal of blockchain technology comes from a dissertation by David L Chaum, A doctor at UCLA, where it is stated as "a distributed computer system that can be established, maintained, and trusted by mutually suspicious groups." It is a distributed database where each record of data can be stored and verified across the network without having to rely on a centralized authority. The fact that there is no central authority in blockchain technology makes it very appealing to many people, as the data can be made more private, secure, and anonymous than if controlled by a central authority. Blockchain, in its essence, is just a logistical system of decentralized distribution; it is just a blueprint on how to deal with data that has traditionally been controlled and verified by a central authority (generally a company, government, or third party). Blockchain in itself is a harmless mathematical and logistical system that allows for decentralization and consistency.  
             </p>
+            
         
-        </div>
-        <div id="information">
+        </section>
+        <section id="information">
             <div class="title">
                 history of the blockchain
             </div>
             <div class="timeline-container" style="max-width: 650px;">
                 <div class="timeline">
-                    <div class="timeline-container success">
+                    <div class="hideme timeline-container past">
                         <div class="timeline-icon">
                             <i class="far fa-grin-hearts"></i>
                         </div>
                         <div class="timeline-body">
-                            <h4 class="timeline-title"><div class="badge">Computer Systems Established, Maintained, and Trusted by Mutually Suspicious Groups proposed by David Chaum</div></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                            <h4 class="timeline-title"><div class="badge">Dissertation: Computer Systems Established, Maintained, and Trusted by Mutually Suspicious Groups proposed by David Chaum</div></h4>
+                            <p>David Chaum is regarded as the grandfather of crypto currency due to his dissertation written about a decentralized distribution system, aka a barebones blockchain system</p>
                             <p class="timeline-subtitle">1979, College of Engineering, University of California, Berkeley.
                             </p>
                         </div>
                     </div>
-                    <div class="timeline-container warning">
+                    <div class="hideme timeline-container warning">
                         <div class="timeline-icon">
                             <i class="far fa-grimace"></i>
                         </div>
                         <div class="timeline-body">
                             <h4 class="timeline-title"><span class="badge">Satashi Nakamoto Writes Bitcoin WhitePaper</span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                            <p>Satashi Nakamoto, the creator of Bitcoin, writes the Bitcoin white paper titled: "Bitcoin: A Peer-to-Peer Electronic Cash System" detailing a proof of work system to create a decentralized currency</p>
                             <p class="timeline-subtitle">2009, unkown location</p>
                         </div>
                     </div>
-                    <div class="timeline-container ">
+                    <div class="hideme timeline-container ">
                         <div class="timeline-icon">
                             <i class="far fa-grin"></i>
                         </div>
                         <div class="timeline-body">
-                            <h4 class="timeline-title"><div class="badge">Ethereum Blockchain and Smart Contract System Is Created By Vitalk Buterin</div></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                            <h4 class="timeline-title"><div class="badge">ethereum blockchain and smart contract system is proposed by vitalk buterin</div></h4>
+                            <p>The Ethereum Chain, which as of now is one of the most influential blockchains was proposed in 2013 as more than just a Cryptocurrency, but also as a way to exchange data and agreements called Smart Contracts</p>
                             <p class="timeline-subtitle">2013</p>
                         </div>
                     </div>
-                    <div class="timeline-container">
+                    <div class="hideme timeline-container danger">
                         <div class="timeline-icon">
                             <i class="far fa-grin-beam-sweat"></i>
                         </div>
                         <div class="timeline-body">
-                            <h4 class="timeline-title"><span class="badge">Secondary</span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos. Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
-                            <p class="timeline-subtitle">3 Days Ago</p>
+                            <h4 class="timeline-title"><span class="badge">the blockchain boom starts and gains mainstream attention</span></h4>
+                            <p>Blockchain quickly gains massive popularity as Bitcoin's price rises from hundreds of dollars to tens of thousands of dollars. More blockchain systems are proposed, created, and optomized</p>
+                            <p class="timeline-subtitle">2017</p>
                         </div>
                     </div>
-                    
+                    <div class="hideme timeline-container info">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-beam-sweat"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">nft technology gains mainstream attention</span></h4>
+                            <p>Non-Fundgible-Tokens reach technological maturity and can be used to "own" or claim items or assets on the internet, sparking a digital art and game revolution</p>
+                            <p class="timeline-subtitle">2019</p>
+                        </div>
+                    </div>
+                    <div class="hideme timeline-container success">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-beam-sweat"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">enviorenmental concerns are raised and start to be addresed</span></h4>
+                            <p>the enviorenmental effects of some blockchains starts to come into questions as their energy expenditure continues to grow, new blockchains are created and evolved to use less energy and provide a cleaner system</p>
+                            <p class="timeline-subtitle">2020</p>
+                        </div>
+                    </div>
+                    <div class="hideme timeline-container ">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><div class="badge">ethereum blockchain shifts to a more enviorenmentaly friendly verification system</div></h4>
+                            <p>The Ethereum Chain, the second largest and most influential blockchain switches its verification system from Proof of Work to Proof Of Stake in response to high energy consumption and to provide a cleaner system</p>
+                            <p class="timeline-subtitle">2022</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="howitworks">
+        </section>
+        <section id="howitworks">
             <div class="title">
-                How Does Blockchain Work?
+                how does a blockchain work?
             </div>
-        </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur excepturi vitae sapiente placeat amet dolorem nisi a obcaecati voluptatibus voluptas nam deleniti impedit, repudiandae fuga neque inventore debitis nulla veniam.
+            </p>
+            <div class="video-wrapper">
+                <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/SSo_EIwHSd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/M3EFi_POhps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            </iframe>
+        </section>
+        <section id="use">
+            <div class="title">
+                what can blockchain be used for?
+            </div>
+            
+            <div class="uses">
+                <div class="car-wrapper">
+                    <div class="carousel">
+                      <div class="carousel__item">
+                        <div class="carousel__item-head">
+                            🪙
+                        </div>
+                        <div class="carousel__item-body">
+                          <p class="cartitle">currency</p>
+                          <p class="carsub">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                      </div>
+                      <div class="carousel__item">
+                        <div class="carousel__item-head">
+                            🏥
+                        </div>
+                        <div class="carousel__item-body">
+                          <p class="cartitle">healthcare</p>
+                          
+                        </div>
+                      </div>
+                      <div class="carousel__item">
+                        <div class="carousel__item-head">
+                            🗳️
+                        </div>
+                        <div class="carousel__item-body">
+                          <p class="cartitle">Voting</p>
+                        </div>
+                      </div>
+                      <div class="carousel__item">
+                        <div class="carousel__item-head">
+                            🏠
+                        </div>
+                        <div class="carousel__item-body">
+                          <p class="cartitle">Real Estate</p>
+                        </div>
+                      </div>
+                      <div class="carousel__item">
+                        <div class="carousel__item-head">
+                            🏭
+                        </div>
+                        <div class="carousel__item-body">
+                          <p class="cartitle">supply chains</p>
+                        </div>
+                      </div>
+                      <div class="carousel__item">
+                        <div class="carousel__item-head">
+                            🖼️
+                        </div>
+                        <div class="carousel__item-body">
+                          <p class="cartitle">Digital Art</p>
+                        </div>
+                      </div>
+                      <div class="carousel__item">
+                        <div class="carousel__item-head">
+                            📈
+                        </div>
+                        <div class="carousel__item-body">
+                          <p class="cartitle">Investment</p>
+                        </div>
+                      </div>
+                      <div class="carousel__item">
+                        <div class="carousel__item-head">
+                            💱
+                        </div>
+                        <div class="carousel__item-body">
+                          <p class="cartitle">lending</p>
+                        </div>
+                      </div>
+                      <div class="carousel__item">
+                        <div class="carousel__item-head">
+                            💾
+                        </div>
+                        <div class="carousel__item-body">
+                          <p class="cartitle">data</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            
+        </section>
+        <!-- <section id="environment">
+            <div class="title">
+                environmental impact explored
+            </div>
+        </section> -->
+        <section id="cryptos">
+            <div class="title">
+                cool cryptos
+            </div>
+            <div class="crypto-wrapper">
+                <a href="https://www.bitcoin.org" target="_blank">
+                    <div class="crypto-box">
+                        <div class="circle"><img src="assets/Bitcoin.svg"></div>
+                        <div class="text">
+                              bitcoin is regarded as the father of cryptocurrency, bitcoin is the oldest and currently most used cryptocurrency out there
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.ethereum.org" target="_blank">
+                    <div class="crypto-box">
+                        <div class="circle"><img src="assets/Ethereum-icon-purple.svg"></div>
+                        <div class="text">
+                            ethereum changed the blockchain with the introduction of smart contracts allowing programmed transactions to occur
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.getmonero.org" target="_blank">
+                    <div class="crypto-box">
+                        <div class="circle"><img src="assets/monero-1.svg"></div>
+                        <div class="text">
+                            monero is a truly private, and decentralized cryptocurrency that keeps your finances confidential and secure from uncle sam's prying eyes
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.solana.com" target="_blank">
+                    <div class="crypto-box">
+                        <div class="circle">
+                            <img src="assets/solana-sol.svg" style="height:60px">
+                        </div>
+                        <div class="text">
+                            solana is a new chain that overcame many of bitcoins and ethereums problems, and is currently the fastest and cheapest blockchain and is also eco friendly
+                        </div>
+                    </div>
+                </a>
+        </section>
+        <section id="sources">
+            <div class="title">
+                sources and works used
+            </div>
+            <div class="allsources">
+                <ul>
+                    <li><a href="#">Blockchain Video</a></li>
+                    <li><a href="#">Proof Of Stake Video</a></li>
+                    <li><a href="#">Bitcoin SVG</a></li>
+                    <li><a href="#">Ethereum SVG</a></li>
+                    <li><a href="#">Monero SVG</a></li>
+                    <li><a href="#">Solana SVG</a></li>
+                </ul>
+            </div>
+            <div class="wave waveone"></div>
+        </section>
     </div>
         <script src="./javascript/text/text.js"></script>
         <script src="./javascript/chain/chain.js"></script>

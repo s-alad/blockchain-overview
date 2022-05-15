@@ -1,3 +1,6 @@
+$secondary: #069e77;
+$primary: #191E29;
+
 * {
     box-sizing: border-box;
 }
@@ -8,24 +11,43 @@ html {
     margin: 0;
 }
 
+a:link {
+    color: transparent;
+  }
+  
+a:visited {
+    color: transparent;
+}
+
 body {
     background-color: #191E29;
 }
 
-@mixin displayflex($justify: center) {
+section {
+    position: relative;
+}
+
+@mixin displayflex($justify: center, $direction: column) {
     justify-content: $justify;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: $direction;
+}
+@mixin title {
+    color: white;
+    font-family: TTcDB;
+    font-size: 62px;
+    margin-bottom: 40px;
+    z-index: 10;
 }
 
 #alto {
-    height: 85px;
+    height: 10vh;
 }
 
 #centro {
-    @include displayflex;
-    height: 100vh;
+    @include displayflex(start);
+    height: 90vh;
 
     #blockchain {
         margin: 25px 0 0 0;
@@ -88,7 +110,7 @@ body {
         text-align: center;
         font-size: 2vw;
         color: white;
-        font-family: TTcR;
+        font-family: TTcDB;
     }
     .action {
         margin: 45px 0 0 0;
@@ -106,6 +128,7 @@ body {
             width: 110px;
             transition: 0.2s;
             z-index: 99;
+            font-family: TTcDB; 
         }
         button:hover {
             background-color: white;
@@ -114,16 +137,31 @@ body {
         }
     }
 }
+.wave {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -10;
+}
+.waveone {
+    background-image: url(../assets/layered-waves-haikei.svg);
+    position: absolute;
+    bottom: -20px;
+}
+.wavetwo {
+    background-image: url(../assets/top.svg);
+    position: absolute;
+    top: -20px;
+}
 
 #brief {
-    padding-top: 65px;
+    padding-top: 205px;
     @include displayflex(start);
 
     .title {
-        color: white;
-        font-family: TTcDB;
-        font-size: 62px;
-        margin-bottom: 40px;
+        @include title
     }
 
     p {
@@ -133,6 +171,7 @@ body {
         color: white;
         width: 80%;
     }
+    
 }
 
 #information {
@@ -140,22 +179,197 @@ body {
     @include displayflex(start);
 
     .title {
-        color: white;
-        font-family: TTcDB;
-        font-size: 62px;
-        margin-bottom: 40px;
+        @include title
     }
 }
 
 #howitworks {
-    height: 1000px;
+    height: 850px;
     padding-top: 65px;
     @include displayflex(start);
 
     .title {
+        @include title
+    }
+    p {
+        text-align: center;
+        font-size: 22px;
+        font-family: TTcR;
         color: white;
-        font-family: TTcDB;
-        font-size: 62px;
-        margin-bottom: 40px;
+        width: 80%;
+    }
+    .video-wrapper {
+        bottom:100px;
+        aspect-ratio: 960/360;
+        position: relative;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../assets/stacked-waves-haikei.svg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .video {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 100px;
+        position: relative;
+        bottom: 0px;
+        box-shadow: 0 0 30px #FFF;
+        
     }
 }
+
+#use {
+    @include displayflex;
+    padding-left: 15%;
+    padding-right: 15%;
+
+    .title {
+        @include title
+    }
+    
+    .cartitle {
+        color: white;
+        font-family: TTcDB;
+        font-size: 32px;
+        z-index: 10;
+    }
+    .carsub {
+        color: white;
+        font-family: TTcR;
+        font-size: 16px;
+    }
+
+    .uses {
+        height: 400px;
+        width: 600px
+    }
+
+}
+
+#environment {
+    @include displayflex;
+
+    .title {
+        @include title
+    }
+}
+
+#cryptos {
+    @include displayflex();
+
+    .title {
+        @include title
+    }
+
+    .crypto-wrapper {
+        margin-top: 20px;
+        @include displayflex($direction: row);
+        padding-bottom: 100px;
+    }
+    .crypto-box {
+        border: 4px solid white;
+        border-radius: 14px;
+        width: 300px;
+        height: 400px;
+        margin: 0px 20px 0px 20px;
+        box-shadow: 0 0 200px 10px $secondary;
+        padding: 40px 0px 40px 0px;
+        @include displayflex($justify: start);
+        cursor: pointer;
+
+        .circle {
+            height: 110px;
+            width: 110px;
+            @include displayflex();
+            background-color: white;
+            border-radius: 100%;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+        }
+
+        .text {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 22px;
+            font-family: TTcR;
+            color: white;
+            width: 80%;
+        }
+    }
+    .crypto-box:hover {
+        box-shadow: 0 0 200px 10px $secondary,
+        0 0 100px 10px #fff;
+        transition: .25s ease-in-out;
+    }
+}
+
+#sources {
+    @include displayflex();
+
+    .title {
+        @include title
+    }
+    .allsources {
+        font-family: TTcR;
+        color: white;
+        margin-bottom: 220px;
+        width: 250px;
+        //background-color: #2196F3;
+          
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          }
+          
+          li {
+            font: 200 20px/1.5 TTcR;
+            border-bottom: 1px solid #ccc;
+          }
+          
+          li:last-child {
+            border: none;
+          }
+          
+          li a {
+              text-align: center;
+            text-decoration: none;
+            color: #FFF;
+          
+            -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+            -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+            -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+            -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+            transition: font-size 0.3s ease, background-color 0.3s ease;
+            display: block;
+          }
+          
+          li a:hover {
+            font-size: 26px;
+            background: $secondary;
+          }
+          
+    }
+    .source {
+        max-height: 25px;
+        background-color: #00768b;
+        //border: 4px solid white;
+        padding: 20px;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 8px;
+        margin: 4px;
+    }
+}
+
+//=======
