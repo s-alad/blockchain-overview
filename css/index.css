@@ -191,8 +191,8 @@ section {
   width: 80%;
 }
 #howitworks .video-wrapper {
-  bottom: 100px;
-  aspect-ratio: 960/360;
+  height: 900px;
+  bottom: 40px;
   position: relative;
   width: 100%;
   background-position: center;
@@ -229,6 +229,7 @@ section {
   font-size: 62px;
   margin-bottom: 40px;
   z-index: 10;
+  margin-bottom: 0;
 }
 #use .cartitle {
   color: white;

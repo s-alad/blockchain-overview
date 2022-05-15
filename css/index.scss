@@ -199,8 +199,9 @@ section {
         width: 80%;
     }
     .video-wrapper {
-        bottom:100px;
-        aspect-ratio: 960/360;
+        height: 900px;
+        bottom:40px;
+        //aspect-ratio: 960/360;
         position: relative;
         width: 100%;
         background-position: center;
@@ -213,6 +214,7 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
+        
     }
     .video {
         margin-left: 10px;
@@ -231,7 +233,8 @@ section {
     padding-right: 15%;
 
     .title {
-        @include title
+        @include title;
+        margin-bottom: 0;
     }
     
     .cartitle {
