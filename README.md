@@ -1,1 +1,1 @@
-https://blockchain-multimodal.glitch.me/#brief
+https://blockchain-multimodal.glitch.me/
